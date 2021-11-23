@@ -1,0 +1,66 @@
+﻿<!--   _Layout.cshtml
+Name: Katherine Bellman
+Student ID: 100325825
+Date: November 15th 2021
+
+Description: Layout for MVC web application with Entity Framework
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Incoporeal Incorporated</title>
+	<link rel="icon" type="image/x-icon" href="/images/IncIncLogo 256x256.ico"/>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" />
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	
+</head>
+<body>
+<header>
+	<!--NAV BAR START-->
+	<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-secondary">
+		<div class="container-fluid bg-secondary text-white " >
+			<a class="navbar-brand mb-0 h1" asp-area="" asp-controller="Home" asp-action="Index"><img src="/images/IncIncLogo.png" alt="" width="30" height="24"> Incoporeal Incorporated</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+			        aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Worker Entry</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="About">About</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!--NAV BAR END-->
+</header>
+<br/>
+<!--Content DIV-->
+<div class="container text-center m-auto text-white jumbotron align-self-center" style="padding: 2%;">
+	<main role="main" class=" pb-3 m-auto bg-white text-dark" style="padding: 2%">
+		@RenderBody()
+	</main>
+</div>
+<br/>
+<!--Content DIV END-->
+
+<footer class="border-top footer text-muted">
+	<div class="container">
+		&copy; 2021 - IncIncWeb -<a asp-area="" asp-controller="Home" asp-action="About">About</a>
+	</div>
+</footer>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
