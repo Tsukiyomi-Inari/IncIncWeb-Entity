@@ -16,7 +16,8 @@ Description: Layout for MVC web application with Entity Framework
 	<link rel="icon" type="image/x-icon" href="/images/IncIncLogo 256x256.ico"/>
 	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="~/css/site.css" />
-	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	      rel="stylesheet">
 	
 </head>
 <body>
@@ -32,10 +33,14 @@ Description: Layout for MVC web application with Entity Framework
 			<div class="collapse navbar-collapse">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
-						<a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Worker Entry</a>
+						<a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="About">About</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index"><span class="material-icons d-inline">table_view</span>
+							Worker List</a>
 					</li>
 				</ul>
 			</div>

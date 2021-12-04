@@ -1,4 +1,14 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+﻿/*
+// site.css
+//         Title: Hourly Worker Web
+//		   Created: November 23rd 2021
+// Last Modified: December 4th 2021
+//    Written By: Katherine Bellman
+//	
+//	Description: site styling for Entity framework web application 
+*/
+
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
@@ -68,4 +78,39 @@ body {
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
+}
+
+.carousel-item {
+	filter: sepia(100%) ;
+}
+
+
+.overlay {
+	filter: opacity(75%);
+}
+
+.behind-text {
+	/*backdrop-filter: blur(5px);*/
+	background-color: rgba(255, 255, 236, 0.45);
+}
+
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+	/* Support for IE. */
+	font-feature-settings: 'liga';
 }

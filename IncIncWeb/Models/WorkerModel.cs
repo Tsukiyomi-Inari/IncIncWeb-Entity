@@ -1,19 +1,20 @@
 ﻿// HourlyWorkerModel.cs
 //         Title: Hourly Worker Web
-// Last Modified: November 23th 2021
+//	     Created: November 23rd 2021
+// Last Modified: December 4th 2021
 //    Written By: Katherine Bellman
 //	
-//	Description: Model for Hourly/SeniorWorker class
-
+//	Description: Model for HourlyWorker class and is inherited by the SeniorWorker class
 
 using System.ComponentModel.DataAnnotations;
-
 
 namespace IncIncWeb.Models
 {
 	public class WorkerModel
 	{
-		//worker ID
+		/// <summary>
+		/// Worker's Id
+		/// </summary>
 		public int Id { get; set; }
 
 		/// <summary>
@@ -30,12 +31,7 @@ namespace IncIncWeb.Models
 		[Display(Name = "Last Name:")]
 		public string LastName { get; set; }
 
-		/// <summary>
-		/// True if the worker is a senior worker, False if not.
-		/// </summary>
-		[Required]
-		[Display(Name = "Worker Type:")]
-		public bool IsSeniorWorker { get; set; }
+
 
 		/// <summary>
 		/// Number of messages sent by Worker
@@ -45,50 +41,6 @@ namespace IncIncWeb.Models
 		[Display(Name = "Messages Sent:")]
 		public string Messages { get; set; }
 
-		///// <summary>
-		///// Worker pay
-		///// </summary>
-		//public decimal Pay { get; set; }
 
-		///// <summary>
-		///// Total workers
-		///// </summary>
-		//public int TotalWorkers { get; set; }
-
-		///// <summary>
-		///// Total Pay
-		///// </summary>
-		//public decimal TotalPay { get; set; }
-
-		///// <summary>
-		///// Average Pay
-		///// </summary>
-		//public decimal AveragePay { get; set; }
-
-		///// <summary>
-		///// Total Messages Sent
-		///// </summary>
-		//public int TotalMessages { get; set; }
-
-		//public new string ToString { get; set; }
-
-		///// <summary>
-		///// Parameterized
-		///// </summary>
-		///// <param name="firstName"></param>
-		///// <param name="lastName"></param>
-		///// <param name="messages"></param>
-		//public WorkerModel(string firstName, string lastName, string messages)
-		//{
-
-		//}
-
-		///// <summary>
-		///// Default
-		///// </summary>
-		//public WorkerModel()
-		//{
-
-		//}
 	}
 }
