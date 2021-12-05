@@ -1,36 +1,57 @@
-﻿@model IncIncWeb.Models.WorkerModel
+﻿<!--   _Layout.cshtml
+Name: Katherine Bellman
+Student ID: 100325825
+Date: November 15th 2021
+
+Description: Layout for MVC web application with Entity Framework
+
+-->
+
+@model IncIncWeb.Models.WorkerModel
 
 @{
-    ViewData["Title"] = "Details";
+	ViewData["Title"] = "Details";
 }
 
 <h1>Details</h1>
 
 <div>
-    <h4>WorkerModel</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FirstName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FirstName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Messages)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Messages)
-        </dd>
-    </dl>
+	<h4>Worker: @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.LastName)</h4>
+	<hr />
+	<dl class="row">
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.DateEntered)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.DateEntered)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.FirstName)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.FirstName)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.LastName)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.LastName)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Messages)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Messages)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Pay)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Pay)
+		</dd>
+	</dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+	<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+	<a asp-action="Index">Back to List</a>
 </div>

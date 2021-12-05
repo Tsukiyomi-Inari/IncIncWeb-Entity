@@ -6,6 +6,7 @@
 //	
 //	Description: Model for HourlyWorker class and is inherited by the SeniorWorker class
 
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace IncIncWeb.Models
@@ -16,6 +17,12 @@ namespace IncIncWeb.Models
 		/// Worker's Id
 		/// </summary>
 		public int Id { get; set; }
+
+		/// <summary>
+		/// Logs time Worker was entered
+		/// </summary>
+		[Display(Name = "Date Entered: ")]
+		public DateTime DateEntered { get; private set; }
 
 		/// <summary>
 		/// Worker first name
@@ -42,5 +49,35 @@ namespace IncIncWeb.Models
 		public string Messages { get; set; }
 
 
+		[Display(Name = "Pay:")]
+		public string Pay
+		{
+
+			get
+			{
+				double employeeMessages = Convert.ToDouble(Messages); // to pass Worker's Messages value to for calculation
+				double returnRate = 0; // Gets the payrate according to num
+
+				//====== 2D Array for Pay calculations =====
+				double[] messagesSent = { 1, 1250, 2500, 3750, 5000 };
+				double[] messagesPayRate = { 0.02, 0.024, 0.028, 0.034, 0.04 };
+
+				//loop through to arrays to find correct range and return the associated rate from second array
+				for (int counter = 0; counter < messagesSent.Length; counter++)
+				{
+					//compare to find coresponding range for messages sent
+					if (employeeMessages >= messagesSent[counter])
+					{
+						//return the rate that is at the same index as coresponding range
+						returnRate = messagesPayRate[counter];
+					}
+				}
+
+				//calculate inputed worker total pay
+				double result = returnRate * employeeMessages;
+				//convert calculation result  to decimal to pass to employeePay 
+				return result.ToString("C");
+			}
+		}
 	}
 }

@@ -51,7 +51,7 @@ namespace IncIncWeb.Controllers
 		// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Messages")] WorkerModel workerModel)
+		public async Task<IActionResult> Create([Bind("Id,DateEntered,FirstName,LastName,Messages")] WorkerModel workerModel)
 		{
 			if (ModelState.IsValid)
 			{
@@ -83,7 +83,7 @@ namespace IncIncWeb.Controllers
 		// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Messages")] WorkerModel workerModel)
+		public async Task<IActionResult> Edit(int id, [Bind("Id,DateEntered,FirstName,LastName,Messages")] WorkerModel workerModel)
 		{
 			if (id != workerModel.Id)
 			{
