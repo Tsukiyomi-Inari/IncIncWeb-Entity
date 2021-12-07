@@ -114,3 +114,12 @@ body {
 	/* Support for IE. */
 	font-feature-settings: 'liga';
 }
+
+
+.data_table {
+	display: inline-block;
+	overflow: hidden;
+	text-align: left;
+/*	padding: 10px;
+	width: 300px;*/
+}

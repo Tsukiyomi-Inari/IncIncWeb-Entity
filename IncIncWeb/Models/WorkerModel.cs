@@ -45,12 +45,12 @@ namespace IncIncWeb.Models
 		/// </summary>
 		[Required(AllowEmptyStrings = false, ErrorMessage = "You must enter the number of messages sent")]
 		[Range((int)1, 15000, ErrorMessage = "Messages sent be be between 1 to 15000")]
-		[Display(Name = "Messages Sent:")]
+		[Display(Name = "Messages :")]
 		public string Messages { get; set; }
 
 
 		[Display(Name = "Pay:")]
-		public string Pay
+		public double Pay
 		{
 
 			get
@@ -76,7 +76,7 @@ namespace IncIncWeb.Models
 				//calculate inputed worker total pay
 				double result = returnRate * employeeMessages;
 				//convert calculation result  to decimal to pass to employeePay 
-				return result.ToString("C");
+				return result;
 			}
 		}
 	}

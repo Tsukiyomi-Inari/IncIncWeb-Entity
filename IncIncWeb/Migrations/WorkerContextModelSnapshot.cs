@@ -43,9 +43,9 @@ namespace IncIncWeb.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Pay")
+                    b.Property<double>("Pay")
 	                    .ValueGeneratedOnAddOrUpdate()
-	                    .HasColumnType("nvarchar(max)");
+	                    .HasColumnType("currency");
 
                     b.HasKey("Id");
 

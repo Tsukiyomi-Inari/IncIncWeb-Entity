@@ -17,7 +17,7 @@ namespace IncIncWeb.Migrations
 					FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
 					LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
 					Messages = table.Column<string>(type: "nvarchar(max)", nullable: false),
-					Pay = table.Column<string>(type: "nvarchar(max)", nullable: false)
+					Pay = table.Column<double>(type: "currency", nullable: false)
 				},
 				constraints: table =>
 				{
